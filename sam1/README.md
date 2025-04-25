@@ -9,7 +9,7 @@ The **Segment Anything Model (SAM)** produces high quality object masks from inp
 
 ## SAM 1 Inference
 
-We discuss how amenable the Image Encoder is to batch processing. When running inference at scale, the Image Encoder is the main bottleneck. We can test this out by benchmarking:
+We discuss how amenable the Image Encoder is to batch processing. When running inference at scale, the Image Encoder is the main bottleneck. We can test this out by benchmarking (Make sure to download the checkpoint before running benchmarking):
 <p align="center">
   <img src="benchmarking/SAM_Components_large_2.jpg" width="90%">
   <br><em>Figure 1: Time across SAM components</em>
