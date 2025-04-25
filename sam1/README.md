@@ -11,17 +11,17 @@ The **Segment Anything Model (SAM)** produces high quality object masks from inp
 
 We discuss how amenable the Image Encoder is to batch processing. When running inference at scale, the Image Encoder is the main bottleneck. We can test this out by benchmarking:
 <p align="center">
-  <img src="benchmarking/SAM_Components_large_2.jpg" width="600">
+  <img src="benchmarking/SAM_Components_large_2.jpg" width="90%">
   <br><em>Figure 1: Time across SAM components</em>
 </p>
 Use the script benchmarking_sam_components.py to obtain similar results, this is from inference on a L4 gpu. Now that we have established the Encoder is the main culprit for eating up our gpu resources, we test out how batching would alleviate this resource constraint.
 <p align="center">
-  <img src="benchmarking/sam_benchmark_dashboard.png" width="600">
+  <img src="benchmarking/sam_benchmark_dashboard.png" width="90%">
   <br><em>Figure 2: Batching speed.</em>
 </p>
 This inference was performed on a L40S gpu. We can probe this further to understand what layers might be out bottlenecj, to do so, we register hooks in the encoder's layers and test out how much time it takes for each layer. We can test how the time scales with batch size.
 <p align="center">
-  <img src="benchmarking/batch_layer_timings.png" width="600">
+  <img src="benchmarking/batch_layer_timings.png" width="90%">
   <br><em>Figure 3: Batching speed per layer. </em>
 </p>
 
