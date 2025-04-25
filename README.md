@@ -2,6 +2,8 @@
 
 The single most important thing about Greenstand's use case is that the Encoder is highly parallelizable. This autosam2 offers a speedup of about 4.5 vis-à-vis autosam. Refer to [AutoSAM](https://github.com/xhu248/AutoSAM) here. 
 
+You can read how SAM1's Image Encoder is not efficient for running inference at scale -> [Benchmarking README](sam1/README.md).
+
 **Segment Anything Model 2 (SAM 2)** is a foundation model towards solving promptable visual segmentation in images and videos. The model design is a simple transformer architecture with streaming memory for real-time video processing. 
 
 ## SAM 2 Installation
