@@ -10,4 +10,4 @@ outputs/*
 checkpoints/*.pt
 demo/backend/checkpoints/*.pt
 output_experiment/leaf_segmentation/checkpoints/*.pth
-
+sam1/sam_vit_b_01ec64.pth
